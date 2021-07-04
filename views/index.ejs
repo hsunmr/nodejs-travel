@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <title>KINMEN TRAVEL</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="KINMEN TRAVEL MAP">
+        <meta name="author" content="Hsun">
+        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="/stylesheets/style.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    </head>
+    <body>
+        <div class="loading">
+            <div class="waveline"></div>
+        </div>
+        <%- include('layouts/header'); %>
+        <div class="content">
+            <div id="hero">
+                <div id="hero-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="hero-item" style="background-image: url('/images/bg1.jpg'); "></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="hero-item" style="background-image: url('/images/bg3.jpg'); "></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="hero-item" style="background-image: url('/images/bg4.jpg'); "></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-Info pt-0">
+                    <div class="travel p-1 d-inline">
+                        <a href="https://kinmen.travel/zh-tw" title="金門觀光旅遊網"><i class="fa-lg fas fa-bold fa-map-marked-alt"></i> <span class="d-none d-lg-inline">金門觀光旅遊網</span></a>
+                    </div>
+                    <div class="gov p-1 d-inline">
+                        <a class="gov" href="https://www.kinmen.gov.tw/" title="金門縣政府"><img src="/images/Kinmen-logo.png"> <span class="d-none d-lg-inline">金門縣政府</span></a>
+                    </div>
+                    
+                </div>
+                <div class="hero-title">
+                    <img src="/images/hero-text-w-s.png" alt="金門觀光地圖" >
+                </div>
+                <div class="hero-scroll">
+                    <a class="js-scroll-trigger" href="#about">SCROLL</a>
+                </div>
+                <div class="hero-ig">
+                    <a href="https://www.instagram.com/explore/tags/KINMEN/"><i class="fa-lg fab fa-instagram"></i> #KINMEN</a>
+                </div>
+                <div id="hero-subnav">
+                    <ul class="nav">
+                        <li class="active"><a class="js-scroll-trigger" href="#hero"><span>Top</span></a></li>
+                        <li class=""><a class="js-scroll-trigger" href="#about"><span>About</span></a></li>
+                        <li class=""><a class="js-scroll-trigger" href="#attractions"><span>Attractions</span></a></li>
+                        <li class=""><a class="js-scroll-trigger" href="#foods"><span>Foods</span></a></li>
+                        <li class=""><a class="js-scroll-trigger" href="#traffic"><span>Traffic</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            
+            <div id="about" class="container">
+                <div id="about-text" class="pb-5 ">         
+                    <h2 class="pb-5">Why Visit Kinmen?</h2>
+                    <p>金門與週遭的十二座島嶼們，共組為金門縣</p>
+                    <p>因為地理位置的關係，過去被定位為戰略據點</p>
+                    <p>留下許多的戰後遺跡，也成為當今獨具的觀光景色</p>
+                    <p>當然也別忘了金門經典</p>
+                    <p>古厝與洋樓帶你穿越時空</p>
+                    <p>鸕鶿過境震撼視覺，還有色香味俱全的在地美食</p>
+                    <p>金門總讓旅人超乎想像！</p>
+                    <img src="/images/about/icon1.png" id="about-icon">
+                </div>
+                <div id="about-img">
+                    <img src="/images/about/Kinmen-map.png" class="rounded w-100">
+                </div>
+            </div>
+            <div id="selector" class="container-fluid">
+                <div class="container">
+                    <div class="row" id ="selector-header">
+                        <div class="col-7 col-lg-8 pr-0">
+                            <span class="align-middle">不知道要去哪?吃什麼?</span>
+                        </div>
+                        <div class="col-5 col-lg-4 text-right pr-0">
+                            <button class="btn btn-primary" id="random" type="button">
+                                <i class="fas fa-random"></i><span class="d-none d-sm-inline"> 隨機選擇</span>
+                            </button>
+                            <button class="btn btn-primary mr-2" id="psy-test">
+                                <i class="fas fa-pencil-alt"></i><span class="d-none d-sm-inline"> 心理測驗</span>
+                            </button>
+                            <div id="close-icon">
+                                <i class="fas fa-caret-up"></i>
+                            </div>
+                        </div>   
+                    </div>                    
+                 
+                    <div id="selector-content" class="p-3">
+                        result content                    
+                    </div>
+                </div>
+            </div>
+            <div id="attractions" class="container-fluid">
+                <h2>Attractions</h2>
+                <hr>
+                <div class="row p-lg-3 mb-5 attraction-item" id="Mofan-Street">
+                    <div class="col-lg-7 mb-lg-0 mb-3 left">
+                        <img src="/images/attractions/Mofan_Street.jpg" class="w-100 rounded">            
+                    </div>
+                    <div class="col-lg-5 order-sm-first mb-3 right">
+                        <h2>模範街</h2>
+                        <div class="mb-3 attractions-text">
+                            模範街原是明朝末年，鄭成功於後浦練兵的內校場，西元1924年由金門縣商會集資興建，計分橫街和直街兩部分，都用紅磚拱廊建造。
+                            如今的模範街住商混合，許多新創店家進駐，除了販售伴手禮，還有餐廳能夠選擇，讓旅人看到不一樣的金門情。
+                        </div>
+                        <img src="/images/attractions/Mofan_Street2.jpg" class="w-100 rounded">
+                    </div>
+                </div>
+                <div class="row p-lg-3 mb-5 attraction-item no-order" id="Deyue-Tower">
+                    <div class="col-lg-7 mb-lg-0 mb-3 right">
+                        <img src="/images/attractions/Deyue_Tower.jpg" class="w-100 rounded">            
+                    </div>
+                    <div class="col-lg-5 order-lg-first mb-3 left">
+                        <h2>得月樓</h2>
+                        <div class="mb-3 attractions-text">
+                                得月樓建於公元1931年，是水頭聚落黃輝煌經商致富後，委請福建內地的匠師陳南安設計建造的一座高聳建物，也是當時水頭聚落最高的建築，便以「近水樓台先得月」之意涵，取名為「得月樓」。
+                                目前也有免費導覽，帶領遊客走進得月樓的歲月風華。
+                        </div>
+                        <img src="/images/attractions/Deyue_Tower2.jpg" class="w-100 rounded">
+                    </div>
+                </div>
+                <div class="row p-lg-3 mb-5 attraction-item" id="Zhaishan-Tunnel">
+                    <div class="col-lg-7 mb-lg-0 mb-3 left">
+                        <img src="/images/attractions/Zhaishan_Tunnel.jpg" class="w-100 rounded">            
+                    </div>
+                    <div class="col-lg-5 order-sm-first mb-3 right">
+                        <h2>翟山坑道</h2>
+                        <div class="mb-3 attractions-text">
+                                循階梯而下，走進翟山坑道幽暗的光線裡，鬼斧神工的軍事傑作就在眼前，坑道盡頭接引著深不見底的海水，在炎熱的夏季裡替旅人們帶來一些清涼。
+                                翟山坑道內，既長而寬闊的坑道及水道兩區域，是八二三砲戰期間，動員無數人力、耗費五年時間，才辛苦鑿出這條能夠容納42艘水道小艇進出、迴轉的極大的工程，又被譽為「地下金門」傑作之一。       
+                                隨著海面晃動的倒影前行，不由得對戰時國軍弟兄的努力感到震撼。走出坑道外，陳列著各式登陸小艇以及防空武器，也是曾經的軍事記憶，值得前往駐足留影。
+                        </div>
+                        <img src="/images/attractions/Zhaishan_Tunnel2.jpg" class="w-100 rounded">
+                    </div>
+                </div>
+                <div class="more-btn">
+                    <a href="/attractions"><i class="far fa-hand-pointer"></i> 看更多景點 </a>
+                </div>
+            </div>
+            <div id="foods" class="container-fluid">
+                <h2>Special Kinmen Food</h2>
+                <div class="container">
+
+                    <div class="summary">
+                        來到充滿戰地風情的金門，一定要來嘗嘗具有當地的美食小吃，承襲了閩南美食特點融合金門在地食材、烹飪手法，包裹著當時戰爭所帶來的影響，所形成獨特的飲食文化，不僅色、香、味俱全，也是來金門當兵軍人懷念的在地好滋味，更是來金門絕不能錯過的特色美食。
+                    </div>
+
+                    <div class="row pt-3 pt-sm-5 pb-3">
+                        <div class="col-lg-4 col-md-6 food-item ">
+                            <a href="/foods/3">
+                                <div class="food-info">
+                                    以慢火精熬，使米粒開花，熬到稠狀看不見米粒，香濃順口的廣東粥，搭配各式的鮮美食材烹煮，再加上一條油條，堪稱是絕配，也是金門在地人的道地早餐，過了上午時刻可是吃不到喔！
+                                </div>
+                                <div class="food-img">
+                                    <img src="/images/foods/Guangdong_Congee.jpg" class="w-100 rounded">
+                                </div>
+                                <div class="food-title">
+                                    <span class="font-weight-bold">廣東粥</span> 
+                                    <span class="en">Guangdong Congee</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 food-item">
+                            <a href="/foods/7">
+                                <div class="food-info">
+                                    經過烘烤後的燒餅，層層酥皮散發芝麻豬油香，包著青蔥豬後腿肉的內餡，鹹香酥脆的滋味，令人回味再三。除了鹹的燒餅外，以麥芽糖為餡料的甜燒餅也不能錯過喔。
+                                </div>
+                                <div class="food-img">
+                                    <img src="/images/foods/Shāobǐng.jpg" class="w-100 rounded">
+                                </div>
+                                <div class="food-title">
+                                    <span class="font-weight-bold">燒餅</span>
+                                    <span class="en">Shāobǐng </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 food-item">
+                            <a href="/foods/9">
+                                <div class="food-info">
+                                    與台灣炸到酥脆的油條夾著燒餅吃法不同，金門的油條較軟、札實、有韌性，偏向甜甜圈的口感，不論是單吃或是配上一碗料多味美的廣東粥，皆是十分美味。
+                                </div>
+                                <div class="food-img">
+                                    <img src="/images/foods/Yóutiáo.jpg" class="w-100 rounded">
+                                </div>
+                                <div class="food-title">
+                                    <span class="font-weight-bold">油條</span>
+                                    <span class="en">Yóutiáo</span>
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="col-lg-4 col-md-6 food-item">
+                            <a href="/foods/2">
+                                <div class="food-info">
+                                    把煮開的泡麵瀝乾，將切成絲的蔬菜、肉絲、蛋液和泡麵下鍋以大火快炒，香氣四溢又充滿營養的炒泡麵，是在金門當兵的阿兵哥所懷念的美味宵夜小點。
+                                </div>
+                                <div class="food-img">
+                                    <img src="/images/foods/Fried_Instant_Noodles.jpg" class="w-100 rounded">
+                                </div>
+                                <div class="food-title">    
+                                    <span class="font-weight-bold">炒泡麵</span>
+                                    <span class="en">Fried Instant Noodles</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 food-item">
+                            <a href="/foods/4">
+                                <div class="food-info">
+                                    做工繁複、刀工了得的宴菜，以大骨熬幾個小時的高湯，加入切成細絲的香菇、金門生產的大白菜、三層肉等豐富食材下鍋烹煮，一道清爽可口的金門傳統筵席菜就此上桌。
+                                </div>
+                                <div class="food-img">
+                                    <img src="/images/foods/Kinmen_Banquet_Soup.jpg" class="w-100 rounded">
+                                </div>
+                                <div class="food-title">
+                                    <span class="font-weight-bold">金門宴菜</span>
+                                    <span class="en">Kinmen Banquet Soup</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 food-item">
+                            <a href="/foods/6">
+                                <div class="food-info">
+                                    金門的石蚵因漲退潮、在石柱上自然生長的緣故，體型較小，肉質緊實鮮甜濃郁，不帶一絲腥味，更可直接生吃，不論是做成蚵嗲、蚵仔麵線、蚵仔炒麵、海蚵煎蛋，都是來金門必吃的美味！
+                                </div>
+                                <div class="food-img">
+                                    <img src="/images/foods/Rock_Oysters.jpg" class="w-100 rounded">
+                                </div>
+                                <div class="food-title">
+                                    <span class="font-weight-bold">石蚵料理</span>
+                                    <span class="en">Rock Oysters</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 food-item">
+                            <a href="/foods/5">
+                                <div class="food-info">
+                                    淋上蛋汁的鍋貼底部煎的焦黃酥脆，咬下一口蛋香四溢的鍋貼，感受內餡微帶肉汁在嘴裡蔓延的鮮甜滋味，再點上酸辣湯和其他特色小吃，簡直是一大享受。
+                                </div>
+                                <div class="food-img">
+                                    <img src="/images/foods/Potstickers.jpg" class="w-100 rounded">
+                                </div>
+                                <div class="food-title">
+                                    <span class="font-weight-bold">鍋貼</span>
+                                    <span class="en">Potstickers </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 food-item">
+                            <a href="/foods/1">
+                                <div class="food-info">
+                                    來金門要嘗嘗當地的牛肉麵，牛肉選自金門養殖、吃酒糟長大的黃牛，肉質軟嫩多汁，吸收牛肉精華的麵條香Q有咬勁，展現了金門在地好滋味！
+                                </div>
+                                <div class="food-img">
+                                    <img src="/images/foods/Beef_Noodles.jpg" class="w-100 rounded">
+                                </div>
+                                <div class="food-title">
+                                    <span class="font-weight-bold">牛肉麵</span>
+                                    <span class="en">Beef Noodles</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 food-item">
+                            <a href="/foods/8">
+                                <div class="food-info">
+                                    選用小金門生的芋頭，製作成綿密又甜滋滋的芋頭冰淇淋，淋上奶香濃郁的煉乳，再搭配各式各樣的配料，料多豐富的芋頭冰兼顧視覺上的饗宴之外，也滿足了舌尖上的味蕾。
+                                </div>
+                                <div class="food-img">
+                                    <img src="/images/foods/Taro_Shaved_Ice.jpg" class="w-100 rounded">
+                                </div>
+                                <div class="food-title">
+                                    <span class="font-weight-bold">芋頭冰</span>
+                                    <span class="en">Taro Shaved Ice</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="traffic" class="container-fluid">
+                <h2>Traffic</h2>
+                <div class="container mt-5 p-5" id="traffic-content">
+                    <div class="row">
+                        <div class="col-md-5 col-xl-6 mb-5 mb-md-0" id="traffic-intro">
+                            <div class="mb-5" id="intro-text">
+                                <span>身為離島的金門，與台灣本島以航空為主，可經由小三通與中國大陸進行來往、旅遊，若是遇上颱風、霧季或狂風班次會有異動或是停航的可能，因此在旅客出發前，請務必要再次與交通業者確認行程。</span>
+                            </div>
+                            <div id="intro-img">
+                                <img src="/images/traffic/map-traffic.png" class="w-100 rounded">
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-xl-6" id="traffic-info">
+                            <div class="mb-3 mb-md-5" id="traffic-link">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <span>公車資訊</span>
+                                        <canvas id="bus" width="100" height="70" ></canvas>
+                                    </div>
+                                    <div class="col-6">
+                                        <span>航班資訊</span>
+                                        <canvas id="plane" width="100" height="70" ></canvas>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div id="info-link">
+                                <span>相關資訊</span>
+                                <div class="row mt-4">
+                                    <div class="col-md-3 col-6 p-1">
+                                        <a href="https://www.taiwantrip.com.tw/line/49?x=5&y=2">
+                                            <i class="fas fa-walking fa-5x p-1"></i><br>
+                                            <span>台灣好行</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-6 p-1">
+                                        <a href="http://www.kcbfa.gov.tw/BusSite/wSite/mp?mp=6">
+                                            <i class="fas fa-bus-alt fa-5x p-1"></i><br>
+                                            <span>公共車船管理處</span>                                    
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-6 p-1">
+                                        <a href="http://www.kma.gov.tw/FlyInfo/FixedList.aspx?1=1&MenuID=7">
+                                            <i class="fas fa-plane fa-5x p-1"></i><br>
+                                            <span>固定航班查詢</span>   
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-6 p-1">
+                                        <a href="https://www.motcmpb.gov.tw/informationlist_543.html">
+                                            <i class="fas fa-ship fa-5x p-1"></i><br>
+                                            <span>小三通航班資訊</span>   
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('layouts/footer'); %>
+        </div>
+    </body>
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/fontawesome/js/all.min.js"></script>
+    <script src="/javascripts/data.js"></script>
+    <script src="/javascripts/main.js"></script>
+
+</html>

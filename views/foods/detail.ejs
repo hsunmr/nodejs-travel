@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= food[0].name %>介紹</title>
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/detail.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+</head>
+<body>
+    <%- include('../layouts/header'); %>
+    <div class="container-fluid" id="content">
+        <h4 class="mt-5"><%= food[0].name %></h4>
+        <div class="container mt-5" id="detail">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="<%= food[0].image %>" class="w-100 rounded">
+                </div>
+                <div class="col-md-6 pt-3">
+                    <h5 class="mb-5">餐廳資訊</h5>
+                    <p>電話: <%= food[0].phone %></p>
+                    <p>地址: <%= food[0].address %> </p>
+                    <p>營業時間: <%= food[0].openTime %></p>
+                </div>
+                
+            </div>
+            <div class="content-intro mt-5">
+                <h5>餐廳介紹</h5>
+                <p><%= food[0].intro %></p>
+            </div>
+            
+        </div>
+        <div class="back-btn mt-5 mb-5">
+            <a href="/foods">Back to Foods</a>
+        </div>
+    </div>
+    <%- include('../layouts/footer'); %>
+    
+</body>
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/vendor/fontawesome/js/all.min.js"></script>
+<script src="/javascripts/detail.js"></script>
+</html>

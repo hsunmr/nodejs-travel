@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>金門縣公車動態資訊</title>
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/bus.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+</head>
+<body>
+    <div id="toolBox">
+        <div class="toolbox-item">
+            <a id="home" href="/" title="Kinmen Map" id="fb-btn"><i class="icon fa-2x fa-fw fas fa-map-signs"></i><span class="text">KINMEN MAP</span></a>
+        </div> 
+        <div class="toolbox-item">
+            <a href="#" title="繁體中文" id="Zh-btn"><span class="icon font-weight-bold">繁</span><span class="text">繁體中文</span></a>
+        </div>
+        <div class="toolbox-item pt-0">
+            <a href="#" title="English Mode" id="En-btn"><span class="icon font-weight-bold">E</span><span class="text">English Mode</span></a>
+        </div>
+        <div class="toolbox-item">
+            <a href="#" title="回到路線查詢頁面" id="return-btn"><i class="fa-2x fa-fw fas fa-undo-alt icon"></i><span class="text">返回查詢頁面</span></a>
+        </div>
+
+    </div>
+    
+    <div class="container" id="bus-content">
+        <div id="header" class="pt-5 container">
+            <h2>金門縣公車動態資訊</h2>
+            <p id="now-position"></p>
+            <div class="bus-info">
+            </div>
+            <div class="bus-search">
+                <h3>請輸入路線編號</h3>
+                <input class="search mt-3" type="text" placeholder="請輸入欲查詢之公車路線" />
+            </div>
+        </div>
+        <ul id="list">
+        </ul>
+    </div>
+</body>
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/vendor/fontawesome/js/all.min.js"></script>
+<script src="/javascripts/bus.js"></script>
+</html>

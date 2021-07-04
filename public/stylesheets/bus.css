@@ -1,0 +1,241 @@
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #f8f3ed;
+}
+.container{
+    padding: 0;
+}
+#toolBox{
+    position: fixed;
+    top:20px;
+    right:15px; 
+    z-index: 11;
+    background-color: #f8f3ed;
+}
+#toolBox .toolbox-item{
+    color: #48687e;
+    text-align: center;
+    padding: 5px;
+}
+#toolBox .toolbox-item a{
+    display: block;
+    color: #48687e;
+    text-decoration: none;
+}
+
+#toolBox span.icon{
+    font-size: 30px;
+}
+#toolBox .icon:hover{
+    color:lightcoral;
+    transition: 0.5s;
+}
+#toolBox .text{
+    display: none;
+}
+#header{
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    padding:10px;
+    background-color: #f8f3ed;
+}
+#header #now-position {
+    font-size: 24px;
+    margin: 20px 0 20px;
+    color: #48687e;
+}
+#header input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #f8f3ed;
+    border-bottom: 1px solid #888;
+    font-size: 21.6px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 1em;
+}
+#list {
+    padding-top: 250px;
+}
+ul{
+    padding-left: 0;
+    list-style:none;
+}
+
+.card {
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 50px 10px 50px;
+    margin-bottom: 20px; 
+}
+.card:hover{
+    background-color: lightsalmon;
+}
+.card a{
+    text-decoration: none;
+}
+.card p {
+    font-weight: 900;
+    margin: 0px 0 10px 65px;
+}
+.bus-way {
+    color: #777;
+    font-size: 24px;
+}
+.bus-num {
+    color: #444;
+    font-size: 30px;
+}
+.bus-num-chinese,.bus-num-english,.bus-way-chinese,.bus-way-english{
+    display:none;
+}
+.bus-info{
+    padding-top:30px; 
+}
+.fa-thumbtack {
+    font-size: 30px;
+    position: relative;
+    top: 45px;
+    color: #ff000073;
+    -webkit-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+    cursor: pointer; 
+}
+.fa-thumbtack:hover {
+    color: #ff0000bd;
+    -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg); 
+        }
+.fa-thumbtack:active {
+    color: #ff0000bd;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg); 
+}
+.bus-state {
+    position: relative;
+    height: 120px;
+}
+
+.station {
+    position: relative;
+    top: 15px;
+    left: 40px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #43afd6;
+    z-index: 1;
+}
+.station .time {
+    text-align: center;
+    color: black;
+    font-weight: 900;
+    line-height: 90px;
+}
+.way {
+    position: absolute;
+    top: 0px;
+    left: 77px;
+    height: 120px;
+    width: 16px;
+    background-color: lightslategray;
+}
+.sta-name {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    font-weight: 900;
+    font-size: 21.6px;
+}
+.bus {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    font-size: 40px;
+    color: lightsalmon;
+    line-height: 10px;
+    -webkit-animation: bus-breathe 1.5s infinite;
+    animation: bus-breathe 1.5s infinite;
+}
+.bus span{
+    color: black;
+    font-size: 16px;
+}
+.arrive {
+    position: relative;
+    top: 10px;
+    left: 40px;
+    background-color: lightsalmon;
+    z-index: 5;
+    -webkit-animation: breathe 1.5s infinite;
+            animation: breathe 1.5s infinite; 
+}
+  
+.over {
+    background-color: lightgreen; 
+}
+
+.stop {
+    background-color: lightcoral; 
+}
+@keyframes breathe {
+    0% {
+      width: 93.6px;
+      height: 93.6px;
+      top: 13.2px;
+      left: 37.6px; }
+    25% {
+      width: 91.8px;
+      height: 91.8px;
+      top: 14.1px;
+      left: 38.8px; }
+    50% {
+      width: 90px;
+      height: 90px;
+      top: 15px;
+      left: 40px; }
+    75% {
+      width: 91.8px;
+      height: 91.8px;
+      top: 14.1px;
+      left: 38.8px; }
+    100% {
+      width: 93.6px;
+      height: 93.6px;
+      top: 13.2px;
+      left: 37.6px; } 
+}
+@keyframes bus-breathe {
+    0% {
+      font-size: 41.6px; }
+    25% {
+      font-size: 40.8px; }
+    50% {
+      font-size: 40px; }
+    75% {
+      font-size: 40.8px; }
+    100% {
+      font-size: 41.6px; } 
+}
+@media (max-width:767.98px){
+    #toolBox{
+        width: 100%;
+        top:auto;
+        bottom:0;
+        right:0;
+        box-shadow: 0 0 15px #222;
+    }
+    #toolBox .toolbox-item{
+        display: inline-block;
+        width:24%;
+        margin: 0 auto;
+    }
+}
